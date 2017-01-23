@@ -1,0 +1,8 @@
+<p>
+  <span>{{productObject.name}}</span>
+  <span>Price: {{productObject.price}} Nis</span>
+  <span>Quantity: {{quantity}}</span>
+  <span>Total: {{productObject.price * quantity}}</span>
+  <input type="button" value="Add" (click)="onAddClicked()">
+  <input type="button" value="Remove" (click)="onRemoveClicked()">
+</p>

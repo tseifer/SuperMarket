@@ -1,3 +1,17 @@
 <h1>
   {{title}}
 </h1>
+
+<h2>Total Cart: {{totalCart}}</h2>
+<div>
+  <ul>
+    <li *ngFor="let prod of productsList">
+      <product [productObject]="prod" (eventAdd)="addOneShekel()" (eventRemove)="reduceShekels($event)"></product>
+    </li>
+  </ul>
+
+
+</div>
+<div>
+  <product-add (addProductEvent)="addProduct($event)"></product-add>
+</div>
